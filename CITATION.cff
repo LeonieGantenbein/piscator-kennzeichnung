@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "Wenn Sie PISCATOR verwenden oder darauf verweisen, zitieren Sie es bitte so."
+title: "PISCATOR – Kennzeichnung von KI-Beteiligung in der Forschung"
+type: dataset
+version: "1.0"
+date-released: "2026-11-17"
+license: CC-BY-4.0
+url: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"
+repository-code: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"
+abstract: >-
+  PISCATOR ist ein Vorschlag zur freiwilligen Offenlegung, wie Künstliche
+  Intelligenz an empirischer Forschung beteiligt war: acht Angaben zu
+  Personenbezug, Infrastruktur, Code, Konzeption, Werkzeugen, Aufbereitung,
+  Herkunft der Daten und Prüfung. PISCATOR ergänzt CLEAR, die Kennzeichnung
+  von KI-Beteiligung an Texten.
+keywords:
+  - Künstliche Intelligenz
+  - Kennzeichnung
+  - Forschungsdaten
+  - Datenschutz
+  - Open Science
+  - Wissenschaftsethik
+  - artificial intelligence
+  - AI disclosure
+  - research data
+  - data protection
+  - research ethics
+authors:
+  - family-names: Gantenbein
+    given-names: Leonie
+references:
+  - type: generic
+    title: "CLEAR – Kennzeichnung von KI-Beteiligung an Texten"
+    authors:
+      - family-names: Gantenbein
+        given-names: Leonie
+    year: 2026
+    version: "1.0"
+    url: "https://github.com/LeonieGantenbein/clear-kennzeichnung"
+preferred-citation:
+  type: generic
+  title: "PISCATOR – Kennzeichnung von KI-Beteiligung in der Forschung"
+  authors:
+    - family-names: Gantenbein
+      given-names: Leonie
+  year: 2026
+  version: "1.0"
+  url: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"
