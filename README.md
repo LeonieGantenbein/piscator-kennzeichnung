@@ -77,7 +77,7 @@ Alle Achsen mit Erklärungen, Hinweise zur Einstufung und weitere Beispiele, etw
 
 ## Zusammen mit CLEAR
 
-In einer Publikation stehen beide Angaben, PISCATOR im Methodenteil, CLEAR am Schluss. Für die Interviewstudie sähe das so aus:
+In einer Publikation stehen beide Angaben, PISCATOR im Methodenteil, CLEAR am Schluss eines Artikels oder im Impressum eines Buches. Für die Interviewstudie sähe das so aus:
 
 ```
 CLEAR (Autorin): C0, L2, E(n)1, A: noScribe (Whisper large-v3), ChatGPT (GPT-5), 03–10/2026, R1
