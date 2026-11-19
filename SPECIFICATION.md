@@ -8,7 +8,7 @@ In empirical research, AI works on data long before a text is written: it transc
 
 PISCATOR is intended for empirical research that collects, prepares, codes or analyses data with code, whether quantitative or qualitative: interview studies and surveys, experiments and measurement series, corpus and archival work, modelling and simulation. Work without data processing of its own, such as theoretical, historical or hermeneutic studies, labels its text with CLEAR. A PISCATOR statement is not needed there.
 
-Anyone publishing research gives both statements: PISCATOR for the research process, CLEAR for the text.
+Anyone publishing research gives both statements: PISCATOR for the research process, CLEAR for the text, provided AI tools were also used to produce or revise the text.
 
 ## The eight axes
 
@@ -216,36 +216,36 @@ The CLEAR line appears as usual at the end of the text or in the imprint.
 
 **Interview study.** A sociologist conducts twenty interviews on living with a chronic illness. She transcribes the recordings with noScribe on her own computer and checks every transcript against the recording. Coding is done by hand; there are no scripts. The data are not published.
 
+Identifiable health data, not published (P(s, n)3), but processed only locally (I0). There is no code (SX). The AI did nothing but transcribe (T(ts)), working with original data collected by the author (O(or)0). Every transcript was checked (R1).
+
 ```
 PISCATOR (author): P(s, n)3, I0, SX, C0, A: noScribe (Whisper large-v3, applied), 03–09/2026, T(ts), O(or)0, R1
 ```
 
-Identifiable health data, not published (P(s, n)3), but processed only locally (I0). There is no code (SX). The AI did nothing but transcribe (T(ts)), working with original data collected by the author (O(or)0). Every transcript was checked (R1).
-
 **Survey with a synthetic version.** A project team analyses its own survey. The pseudonymised data are stored on a university server. There, a language model codes the open-ended responses; 10% are re-coded by hand and the agreement is calculated. The team discussed its hypotheses with an AI. A coding assistant without access to the data writes parts of the analysis code. A model trained on the survey data generates a synthetic version, which is published; the original data are available on request.
+
+Pseudonymised data (P2), openly available as a synthetic version and in the original on request (p, r). Everything ran on the university’s infrastructure (I1); the coding assistant does not count for I because it never saw the data. Parts of the code were generated; code and prompts are published (S(p)2). The language model did the coding (T(an)), systematically validated on a sample (R(v)2). A synthetic version was derived from original data collected by the team (O(or, sy)0).
 
 ```
 PISCATOR (project team): P(p, r)2, I1, S(p)2, C1, A: Llama 3.3 70B (applied), SDV CTGAN (trained on the survey data), Claude Code (Anthropic), Python 3.13, 02–07/2026, T(an), O(or, sy)0, R(v)2
 ```
 
-Pseudonymised data (P2), openly available as a synthetic version and in the original on request (p, r). Everything ran on the university’s infrastructure (I1); the coding assistant does not count for I because it never saw the data. Parts of the code were generated; code and prompts are published (S(p)2). The language model did the coding (T(an)), systematically validated on a sample (R(v)2). A synthetic version was derived from original data collected by the team (O(or, sy)0).
-
 **Training and application in two steps.** A team trains a classification model on the university’s infrastructure with synthetic data that it previously generated without AI and published. It then applies the model locally to sensitive, identifiable data.
+
+During training, the model saw only synthetic data judged to be anonymous (P1); during application, it ran locally (I0) on data that will not be published (P(s, n)3). Had an AI generated the synthetic data from real data, a third line would be added.
 
 ```
 PISCATOR (project team, training): P(p)1, I1, S(p)2, C1, A: own classification model (trained on synthetic data), Python 3.13, 03–05/2026, T0, O(sy)0, R(v)2
 PISCATOR (project team, application): P(s, n)3, I0, S(p)2, C1, A: own classification model (applied), Python 3.13, 06–08/2026, T(an), O(or)0, R(v)2
 ```
 
-During training, the model saw only synthetic data judged to be anonymous (P1); during application, it ran locally (I0) on data that will not be published (P(s, n)3). Had an AI generated the synthetic data from real data, a third line would be added.
-
 **Statistics in a chat.** An economist uploads tables from official statistics to a chat that runs the analysis itself. She uses a private account and recalculates three results by hand.
+
+The data have no personal reference and are published (P(p)0). A service without a data processing agreement is therefore unproblematic here (I(US)3). The code was produced invisibly in the chat (S4). With personal data, the same line would be a warning sign.
 
 ```
 PISCATOR (author): P(p)0, I(US)3, S4, C0, A: ChatGPT (GPT-5, OpenAI, applied), 05/2026, T0, O(ag)2, R2
 ```
-
-The data have no personal reference and are published (P(p)0). A service without a data processing agreement is therefore unproblematic here (I(US)3). The code was produced invisibly in the chat (S4). With personal data, the same line would be a warning sign.
 
 ## Relationship to CLEAR
 
@@ -259,7 +259,7 @@ Whether participants’ consent covers AI processing, whether particularly vulne
 
 ## Limits
 
-PISCATOR has not yet been tested in practice and is certainly incomplete. The label proves nothing; it remains a self-declaration. It does not certify a result but makes visible which procedures an AI helped to carry out.
+PISCATOR has not yet been tested in research practice and is certainly incomplete. The label is a self-declaration and proves nothing. It does not say whether a result is correct; it makes visible where AI was involved in the research process.
 
 ---
 

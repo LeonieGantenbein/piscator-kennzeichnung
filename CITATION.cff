@@ -8,7 +8,7 @@ license: CC-BY-4.0
 url: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"
 repository-code: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"
 abstract: >-
-  PISCATOR ist ein Vorschlag zur freiwilligen Offenlegung, wie Künstliche
+  PISCATOR ist ein Vorschlag zur freiwilligen Offenlegung, wie künstliche
   Intelligenz an empirischer Forschung beteiligt war: acht Angaben zu
   Personenbezug, Infrastruktur, Code, Konzeption, Werkzeugen, Aufbereitung,
   Herkunft der Daten und Prüfung. PISCATOR ergänzt CLEAR, die Kennzeichnung

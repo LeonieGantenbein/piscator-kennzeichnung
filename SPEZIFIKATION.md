@@ -8,7 +8,7 @@ In der empirischen Forschung arbeitet KI an Daten, lange bevor ein Text entsteht
 
 PISCATOR richtet sich an empirische Forschung, die Daten erhebt, aufbereitet, kodiert oder mit Code auswertet, quantitativ wie qualitativ: Interviewstudien und Befragungen, Experimente und Messreihen, Korpus- und Archivarbeit, Modellierungen und Simulationen. Arbeiten ohne eigene Datenverarbeitung, etwa theoretische, historische oder hermeneutische, kennzeichnen ihren Text mit CLEAR. Eine PISCATOR-Angabe ist dort nicht nötig.
 
-Wer wissenschaftlich publiziert, gibt beide Angaben an: PISCATOR für den Forschungsprozess, CLEAR für den Text.
+Wer wissenschaftlich publiziert, gibt beide Angaben an: PISCATOR für den Forschungsprozess, CLEAR für den Text, sofern KI-Tools auch bei der Herstellung und Bearbeitung des Textes genutzt wurden.
 
 ## Die acht Achsen
 
@@ -216,36 +216,36 @@ Die CLEAR-Zeile steht wie gewohnt am Schluss des Textes oder im Impressum.
 
 **Interviewstudie.** Eine Soziologin führt zwanzig Interviews zum Leben mit einer chronischen Erkrankung. Sie transkribiert die Aufnahmen mit noScribe auf dem eigenen Rechner und prüft jedes Transkript gegen die Aufnahme. Kodiert wird von Hand, Skripte gibt es keine. Die Daten werden nicht veröffentlicht.
 
+Identifizierbare Gesundheitsdaten, nicht veröffentlicht (P(s, n)3), aber nur lokal verarbeitet (I0). Code gibt es keinen (SX). Die KI hat ausschliesslich transkribiert (T(ts)), und zwar selbst erhobene Originaldaten (O(or)0). Jedes Transkript wurde geprüft (R1).
+
 ```
 PISCATOR (Autorin): P(s, n)3, I0, SX, C0, A: noScribe (Whisper large-v3, angewendet), 03–09/2026, T(ts), O(or)0, R1
 ```
 
-Identifizierbare Gesundheitsdaten, nicht veröffentlicht (P(s, n)3), aber nur lokal verarbeitet (I0). Code gibt es keinen (SX). Die KI hat ausschliesslich transkribiert (T(ts)), und zwar selbst erhobene Originaldaten (O(or)0). Jedes Transkript wurde geprüft (R1).
-
 **Befragung mit synthetischer Fassung.** Ein Projektteam wertet eine eigene Befragung aus. Die pseudonymisierten Daten liegen auf einem Server der Hochschule. Dort kodiert ein Sprachmodell die offenen Antworten; 10 % werden von Hand nachkodiert und die Übereinstimmung berechnet. Die Hypothesen hat das Team mit einer KI diskutiert. Teile des Auswertungscodes schreibt ein Codeassistent, der keinen Zugriff auf die Daten hat. Ein auf den Befragungsdaten trainiertes Modell erzeugt eine synthetische Fassung, die veröffentlicht wird; die Originaldaten gibt es auf Anfrage.
+
+Pseudonymisierte Daten (P2), synthetisch offen und im Original auf Anfrage zugänglich (p, r). Alles lief auf der Infrastruktur der Hochschule (I1); der Codeassistent zählt bei I nicht, weil er die Daten nie gesehen hat. Teile des Codes sind generiert, Code und Prompts veröffentlicht (S(p)2). Das Sprachmodell hat kodiert (T(an)), systematisch validiert an einer Stichprobe (R(v)2). Aus selbst erhobenen Originaldaten entstand eine synthetische Fassung (O(or, sy)0).
 
 ```
 PISCATOR (Projektteam): P(p, r)2, I1, S(p)2, C1, A: Llama 3.3 70B (angewendet), SDV CTGAN (trainiert auf den Befragungsdaten), Claude Code (Anthropic), Python 3.13, 02–07/2026, T(an), O(or, sy)0, R(v)2
 ```
 
-Pseudonymisierte Daten (P2), synthetisch offen und im Original auf Anfrage zugänglich (p, r). Alles lief auf der Infrastruktur der Hochschule (I1); der Codeassistent zählt bei I nicht, weil er die Daten nie gesehen hat. Teile des Codes sind generiert, Code und Prompts veröffentlicht (S(p)2). Das Sprachmodell hat kodiert (T(an)), systematisch validiert an einer Stichprobe (R(v)2). Aus selbst erhobenen Originaldaten entstand eine synthetische Fassung (O(or, sy)0).
-
 **Training und Anwendung in zwei Schritten.** Ein Team trainiert ein Klassifikationsmodell auf der Infrastruktur der Hochschule mit synthetischen Daten, die es zuvor ohne KI erzeugt und veröffentlicht hat. Danach wendet es das Modell lokal auf sensible, identifizierbare Daten an.
+
+Beim Training hat das Modell nur synthetische, als anonym beurteilte Daten gesehen (P1); bei der Anwendung lief es lokal (I0) auf Daten, die nicht veröffentlicht werden (P(s, n)3). Hätte eine KI die synthetischen Daten aus echten Daten erzeugt, käme eine dritte Zeile hinzu.
 
 ```
 PISCATOR (Projektteam, Training): P(p)1, I1, S(p)2, C1, A: eigenes Klassifikationsmodell (trainiert auf synthetischen Daten), Python 3.13, 03–05/2026, T0, O(sy)0, R(v)2
 PISCATOR (Projektteam, Anwendung): P(s, n)3, I0, S(p)2, C1, A: eigenes Klassifikationsmodell (angewendet), Python 3.13, 06–08/2026, T(an), O(or)0, R(v)2
 ```
 
-Beim Training hat das Modell nur synthetische, als anonym beurteilte Daten gesehen (P1); bei der Anwendung lief es lokal (I0) auf Daten, die nicht veröffentlicht werden (P(s, n)3). Hätte eine KI die synthetischen Daten aus echten Daten erzeugt, käme eine dritte Zeile hinzu.
-
 **Statistik im Chat.** Eine Ökonomin lädt Tabellen der amtlichen Statistik in einen Chat, der die Auswertung selbst rechnet. Sie nutzt ein privates Konto und rechnet drei Ergebnisse von Hand nach.
+
+Die Daten haben keinen Personenbezug und sind veröffentlicht (P(p)0). Deshalb ist ein Dienst ohne Auftragsbearbeitungsvertrag hier unproblematisch (I(US)3). Der Code entstand unsichtbar im Chat (S4). Mit Personendaten wäre dieselbe Zeile ein Warnsignal.
 
 ```
 PISCATOR (Autorin): P(p)0, I(US)3, S4, C0, A: ChatGPT (GPT-5, OpenAI, angewendet), 05/2026, T0, O(ag)2, R2
 ```
-
-Die Daten haben keinen Personenbezug und sind veröffentlicht (P(p)0). Deshalb ist ein Dienst ohne Auftragsbearbeitungsvertrag hier unproblematisch (I(US)3). Der Code entstand unsichtbar im Chat (S4). Mit Personendaten wäre dieselbe Zeile ein Warnsignal.
 
 ## Verhältnis zu CLEAR
 
@@ -259,7 +259,7 @@ Ob die Einwilligung der Teilnehmenden die KI-Verarbeitung abdeckt, ob besonders 
 
 ## Grenzen
 
-PISCATOR ist noch in keiner Praxis erprobt und sicher unvollständig. Die Kennzeichnung beweist nichts; sie bleibt eine Selbstauskunft. Sie beglaubigt kein Ergebnis, sondern macht sichtbar, welche Verfahren eine KI mitgetragen hat.
+PISCATOR ist in der Forschungspraxis noch nicht erprobt und sicher unvollständig. Die Kennzeichnung ist eine Selbstauskunft und beweist nichts. Sie sagt nicht, ob ein Ergebnis richtig ist, sondern macht sichtbar, wo KI am Forschungsprozess beteiligt war.
 
 ---
 
