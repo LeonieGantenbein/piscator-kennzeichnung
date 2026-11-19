@@ -3,6 +3,7 @@ message: "Wenn Sie PISCATOR verwenden oder darauf verweisen, zitieren Sie es bit
 title: "PISCATOR – Kennzeichnung von KI-Beteiligung in der Forschung"
 type: dataset
 version: "1.0"
+doi: 10.5281/zenodo.24372962
 date-released: "2026-11-17"
 license: CC-BY-4.0
 url: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"
@@ -36,6 +37,7 @@ references:
         given-names: Leonie
     year: 2026
     version: "1.0"
+    doi: 10.5281/zenodo.24372561
     url: "https://github.com/LeonieGantenbein/clear-kennzeichnung"
 preferred-citation:
   type: generic
@@ -45,4 +47,7 @@ preferred-citation:
       given-names: Leonie
   year: 2026
   version: "1.0"
+  doi: 10.5281/zenodo.24372962
+  publisher:
+    name: Zenodo
   url: "https://github.com/LeonieGantenbein/piscator-kennzeichnung"

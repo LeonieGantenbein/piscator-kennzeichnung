@@ -7,7 +7,8 @@
 Leonie Gantenbein · Version 1.0 · 2026
 
 © 2026 Leonie Gantenbein · Licence: [CC BY 4.0](LICENSE.md) – free to use and adapt with attribution to the author.<br>
-URL: https://github.com/LeonieGantenbein/piscator-kennzeichnung
+URL: https://github.com/LeonieGantenbein/piscator-kennzeichnung<br>
+DOI: [10.5281/zenodo.24372962](https://doi.org/10.5281/zenodo.24372962)
 
 Deutsche Fassung: [README.md](README.md)
 
@@ -182,7 +183,7 @@ PISCATOR is a proposal in a first version. It builds on CLEAR but has not yet be
 
 ## Citation
 
-Gantenbein, Leonie (2026): PISCATOR – Kennzeichnung von KI-Beteiligung in der Forschung [PISCATOR – Labelling AI Involvement in Research]. Version 1.0. https://github.com/LeonieGantenbein/piscator-kennzeichnung
+Gantenbein, Leonie (2026): PISCATOR – Kennzeichnung von KI-Beteiligung in der Forschung [PISCATOR – Labelling AI Involvement in Research]. Version 1.0. Zenodo. https://doi.org/10.5281/zenodo.24372962
 
 Machine-readable citation: [CITATION.cff](CITATION.cff) (on GitHub via “Cite this repository”)
 
